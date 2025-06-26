@@ -45,21 +45,33 @@
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
     <header class="header_section">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="images/logo.png" alt="" style="height: 60px; width: 60px;" />
-          <div class="brand-text ms-2"
-            style="height: 60px; display: flex; flex-direction: column; justify-content: center;">
-            <span style="font-weight: bold; font-size: 20px;">PhonesBook</span>
-            <small style="font-size: 14px; color: #1cbbb4;">Le bon contact, au bon endroit.</small>
-            <!-- Ton futur slogan -->
-          </div>
-        </a>
+  <div class="container-fluid d-flex justify-content-between align-items-center" style="padding: 10px 20px;">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="" style="height: 60px; width: 60px;" />
+      <div class="brand-text ms-2" style="height: 60px; display: flex; flex-direction: column; justify-content: center;">
+        <span style="font-weight: bold; font-size: 20px;">PhonesBook</span>
+        <small style="font-size: 14px; color: #1cbbb4;">Le bon contact, au bon endroit.</small>
       </div>
-    </header>
-    <!-- end header section -->
+    </a>
+
+    <!-- Burger menu -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- Menu links -->
+    <div class="menu-links" id="menu">
+      <a href="politique-confidentielle.html">Politique de confidentialité</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
 
     <!-- slider section -->
     <section class="slider_section ">
@@ -513,7 +525,7 @@
   <footer class="container-fluid footer_section ">
     <div class="container">
       <p>
-        &copy; <span id="displayDate"></span> All Rights Reserved By
+        &copy; <span id="displayDate"></span> Tous droits réservés
         <a href="https://html.design/">Despecio</a>
       </p>
     </div>
